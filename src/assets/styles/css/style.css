@@ -211,4 +211,8 @@
   padding: 0.8rem 1rem;
   border-radius: 2rem;
   background-color: #3C84AB;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.signup--page__wrapper {
+  background-color: red;
+}

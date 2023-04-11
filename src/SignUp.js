@@ -1,6 +1,6 @@
 const SignUp = () => {
   return ( 
-    <div className="signUp--page__wrapper">
+    <div className="signup--page__wrapper">
       <h1>
         This is the SignUp page
       </h1>
