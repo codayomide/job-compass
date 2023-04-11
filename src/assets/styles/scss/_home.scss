@@ -1,0 +1,111 @@
+.homepage--wrapper{
+  padding: 3rem 1.2rem;
+
+  &__intro{
+    padding: 2rem 0;
+    
+    .text{
+
+      h1 {
+        @include fontmain(2.5rem);
+        margin-bottom: 2rem;
+      }
+  
+      .search_wrapper{
+        position: relative;
+        display: none;
+  
+        input[type="search"]{
+          padding: 1rem;
+          border-radius: 2rem;
+          width: 100%;
+        }
+  
+        .search{
+          padding: .75rem;
+          border-radius: 50%;
+          background-color: $main-color;
+          color: $secondary-color;
+          position: absolute;
+          top: .25rem;
+          right: .4rem;
+          font-weight: 500;
+        }  
+      }
+    } 
+
+    .intro_img{
+     
+    }
+
+
+  }
+  // EMPLOYEE SECTION
+  &__employer{
+    padding: 2rem 0;
+    .employees-img{
+      
+    }
+    
+    .text{
+      p{
+        @include fontsecondary(1rem, 600);
+        margin-bottom: 3rem;
+      }
+  
+      h1{
+        @include fontmain(1.8rem);
+        margin-bottom: 2rem;
+      }
+  
+      .btn_link{
+        color: $secondary-color; 
+        text-decoration: none;
+        display: inline-block;
+        padding: .8rem 1rem;
+        border-radius: 2rem;
+        background-color: $main-color;
+      }
+    }
+  }
+
+  // CATEGORIRS SECTION
+  &__categories{
+    padding: 2rem 0;
+
+    .category{
+      width: 100px;
+      height: 100px;
+      background-color: $main-color;
+    }
+  }
+
+  &__employee{
+    padding: 2rem 0;
+    .employees-img{
+      
+    }
+    
+    .text{
+      p{
+        @include fontsecondary(1rem, 600);
+        margin-bottom: 3rem;
+      }
+  
+      h1{
+        @include fontmain(1.8rem);
+        margin-bottom: 2rem;
+      }
+  
+      .btn_link{
+        color: $secondary-color; 
+        text-decoration: none;
+        display: inline-block;
+        padding: .8rem 1rem;
+        border-radius: 2rem;
+        background-color: $main-color;
+      }
+    }
+  }
+
+}
