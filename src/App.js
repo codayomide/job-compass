@@ -18,7 +18,7 @@ function App() {
           <div className="menu-btn" onClick={handleToggle}>
               <span className="menu-btn__bar"></span>
           </div>
-          <Link to="/home" ><img src={Logo} alt="" /></Link>
+          <Link to="/" ><img src={Logo} alt="" /></Link>
         </div>
 
         <ul className="nav--wrapper__links mobile">
@@ -28,11 +28,10 @@ function App() {
           <li className="link"> <Link to="/SignUp" >Sign Up</Link> </li>
         </ul>
       </nav>
-
       
     <Routes>
-      <Route path="/home" element={ <Home/> } />
-      <Route path="/SignUp" element={ <SignUp/> } />
+      <Route exact path="/" element={ <Home/> } />
+      <Route exact path="/SignUp" element={ <SignUp/> } />
     </Routes>
     </div>
   );
