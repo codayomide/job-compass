@@ -72,11 +72,25 @@
   // CATEGORIRS SECTION
   &__categories{
     padding: 2rem 0;
+    
+    .categories_wrapper{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
 
     .category{
-      width: 100px;
-      height: 100px;
+      padding: 1rem .5rem;
+      border-radius: .5rem;
+      margin: .2rem;
       background-color: $main-color;
+      color: $secondary-color;
+      @include flex(column);
+      justify-content: center;
+
+      .icon{
+        font-size: 1.2rem;
+        margin-bottom: .4rem;
+      }
     }
   }
 

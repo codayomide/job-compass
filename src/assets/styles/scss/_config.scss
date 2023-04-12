@@ -18,6 +18,11 @@ $secondary-font: 'Fira Sans Condensed', sans-serif;
   font-weight: $weight;
 }
 
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
 *{
   margin: 0;
   padding: 0;
