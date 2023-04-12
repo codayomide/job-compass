@@ -185,10 +185,30 @@
 .homepage--wrapper__categories {
   padding: 2rem 0;
 }
+.homepage--wrapper__categories .categories_wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+}
 .homepage--wrapper__categories .category {
-  width: 100px;
-  height: 100px;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0.2rem;
   background-color: #3C84AB;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.homepage--wrapper__categories .category .icon {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
 }
 .homepage--wrapper__employee {
   padding: 2rem 0;
@@ -213,6 +233,7 @@
   background-color: #3C84AB;
 }
 
+<<<<<<< HEAD
 #signup-page {
   background-color: #fff;
   display: -webkit-box;
@@ -269,3 +290,8 @@
   margin-top: 2rem;
   padding: 0.5rem;
 }
+=======
+.signup--page__wrapper {
+  background-color: red;
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> c9e7b082ed2c8e93f63f03c39ef0b136088ecb61

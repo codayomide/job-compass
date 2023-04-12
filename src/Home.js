@@ -1,4 +1,5 @@
 import { FiSearch } from 'react-icons/fi';
+import { BiCodeAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom'
 const Home = () => {
   return ( 
@@ -46,7 +47,40 @@ const Home = () => {
 
         <div className="categories_wrapper">
           <div className="category">
-
+            <BiCodeAlt className='icon' />
+            <div>
+              Developement & IT
+            </div>
+          </div>
+          <div className="category">
+            <BiCodeAlt className='icon' />
+            <div>
+              Developement & IT
+            </div>
+          </div>
+          <div className="category">
+            <BiCodeAlt className='icon' />
+            <div>
+              Developement & IT
+            </div>
+          </div>
+          <div className="category">
+            <BiCodeAlt className='icon' />
+            <div>
+              Developement & IT
+            </div>
+          </div>
+          <div className="category">
+            <BiCodeAlt className='icon' />
+            <div>
+              Developement & IT
+            </div>
+          </div>
+          <div className="category">
+            <BiCodeAlt className='icon' />
+            <div>
+              Developement & IT
+            </div>
           </div>
         </div>
       </div>
