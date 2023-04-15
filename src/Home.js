@@ -1,6 +1,11 @@
 import { FiSearch } from 'react-icons/fi';
 import { BiCodeAlt } from 'react-icons/bi';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import img1 from "./assets/images/3.jpg";
+import img2 from "./assets/images/4.jpg";
+import img3 from "./assets/images/7.png";
+
+
 const Home = () => {
   return ( 
     <div className="homepage--wrapper">
@@ -8,19 +13,23 @@ const Home = () => {
        <div className="text">
        <h1>
           Locate the job that fits who you are
-        </h1>
+       </h1>
+
+       <Link to="/SignUp" className="introBtn_link">Get Starter</Link>
 
         <div className="search_wrapper">
           <input type="search" placeholder="Find Job..."/>
 
-          <span className="search">
-            <FiSearch />
-          </span>
+        <span className="search">
+          <FiSearch />
+        </span>
+
         </div>
+
        </div>
 
        <div className="intro_img">
-        
+        <img src={img3} alt="" />
        </div>
 
       </div>
@@ -28,7 +37,7 @@ const Home = () => {
     {/* EMPLOYEE SECTION */}
       <div className="homepage--wrapper__employer">
         <div className="employer-img">
-          
+          <img src={img1} alt="Img..." />
         </div>
 
         <div className="text">
@@ -82,6 +91,18 @@ const Home = () => {
               Developement & IT
             </div>
           </div>
+          <div className="category">
+            <BiCodeAlt className='icon' />
+            <div>
+              Developement & IT
+            </div>
+          </div>
+          <div className="category">
+            <BiCodeAlt className='icon' />
+            <div>
+              Developement & IT
+            </div>
+          </div>
         </div>
       </div>
 
@@ -96,7 +117,7 @@ const Home = () => {
         </div>
 
         <div className="employee-img">
-          
+        <img src={img2} alt="Img..." />
         </div>
       </div>
     </div>
