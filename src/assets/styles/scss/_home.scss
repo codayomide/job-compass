@@ -1,5 +1,6 @@
 .homepage--wrapper{
   padding: 3rem 1.2rem;
+  
 
   &__intro{
     padding-top: 2rem;
@@ -8,35 +9,25 @@
       width: 100%;
 
       h1 {
-        @include fontmain(2.85rem);
-        margin-bottom: 2rem;
+        @include fontmain(2.3rem);
+        margin-bottom: 1rem;
+      }
+
+      p{
+        @include fontsecondary(1.1rem, 600);
+        margin-bottom: .8rem;
       }
 
       .introBtn_link{
-        display: none;
+        display: inline-block;
+        @include fontsecondary(1.2rem, 600);
+        background-color: $main-color;
+        color: $secondary-color; 
+        text-decoration: none;
+        padding: .6rem 1.7rem;
+        border-radius: 5rem;
       }
-  
-      .search_wrapper{
-        position: relative;
-        // display: none;
-  
-        input[type="search"]{
-          padding: 1rem;
-          border-radius: 2rem;
-          width: 100%;
-        }
-  
-        .search{
-          padding: .75rem;
-          border-radius: 50%;
-          background-color: $main-color;
-          color: $secondary-color;
-          position: absolute;
-          top: .25rem;
-          right: .4rem;
-          font-weight: 500;
-        }  
-      }
+
     } 
 
     .intro_img{
@@ -91,9 +82,10 @@
         color: $secondary-color; 
         text-decoration: none;
         display: inline-block;
-        padding: .8rem 1rem;
+        padding: .8rem 1.75rem;
         border-radius: 2rem;
         background-color: $main-color;
+        @include fontsecondary(1rem, 600);
       }
     }
   }
@@ -168,9 +160,10 @@
         color: $secondary-color; 
         text-decoration: none;
         display: inline-block;
-        padding: .8rem 1rem;
+        padding: .8rem 1.75rem;
         border-radius: 2rem;
         background-color: $main-color;
+        @include fontsecondary(1rem, 600);
       }
     }
   }
@@ -179,19 +172,9 @@
 
 @media screen and (min-width: 360px){
   .homepage--wrapper{
-
-    &__intro{
-      
-      .text{
-        h1{
-          font-size: 3.5rem;
-        }
-      }
-    }
     
     &__employer{
       height: 450px;
-
     }  
 
     &__employee{
@@ -213,20 +196,15 @@
           font-size: 5rem;
         }
 
-        .search_wrapper{
-
-          input[type="search"] {
-            padding: 2rem;
-            border-radius: 4rem;
-            @include fontsecondary(1.5rem, 400);
-          }
-
-          .search{
-            padding: 1.8rem;
-            top: .55rem;
-            right: 1.2rem;
-          }
+        p{
+          font-size:2rem;
         }
+
+        .introBtn_link{
+          padding: 1rem 2rem;
+          font-size: 1.75rem;
+        }
+
       }
     }
 
@@ -237,13 +215,35 @@
         h1{
           font-size: 2.3rem;
         }
+
+        .btn_link{
+          padding: .6rem 2rem;
+          font-size: 1.75rem;
+        }
       }
     }
     
     &__categories{
-      .categories_wrapper{
-        grid-template-columns: auto auto auto;
+
+      h1{
+        font-size: 2.3rem;
       }
+
+      .categories_wrapper{
+
+        grid-template-columns: auto auto auto;
+
+        .category{
+          padding: 2rem 1rem;
+          font-size: 1.5rem;
+
+          .icon{
+            font-size: 2rem;
+          }
+        }
+      }
+
+  
     }
 
     &__employee{
@@ -254,7 +254,10 @@
           font-size: 2.3rem;
         }
 
-       
+        .btn_link{
+          padding: .6rem 2rem;
+          font-size: 1.75rem;
+        }
       }
     }
   } 
@@ -262,6 +265,7 @@
 
 @media screen and (min-width: 1024px){
   .homepage--wrapper{
+    padding: 5rem 6rem;
 
     &__intro{
       display: flex;
@@ -276,19 +280,16 @@
         }
 
         .introBtn_link{
-          display: block;
           color: $secondary-color; 
           text-decoration: none;
           padding: 1.3rem 3rem;
           border-radius: 5rem;
-          width: 15rem;
+          width: 15.5rem;
           @include fontsecondary(2rem, 600);
           background-color: $main-color;
         }
 
-        .search_wrapper{
-          display: none;
-        }
+        
       }
 
       .intro_img{

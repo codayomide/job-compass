@@ -1,4 +1,3 @@
-import { FiSearch } from 'react-icons/fi';
 import { BiCodeAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import img1 from "./assets/images/3.jpg";
@@ -12,20 +11,15 @@ const Home = () => {
       <div className="homepage--wrapper__intro">
        <div className="text">
        <h1>
-          Locate the job that fits who you are
+          Looking for the right business partner?
        </h1>
+       <p>
+          Job compass will direct you to find your next business partner who will take your business to the next level...
+       </p>
 
-       <Link to="/SignUp" className="introBtn_link">Get Starter</Link>
+       <Link to="/SignUp" className="introBtn_link">Get Started</Link>
 
-        <div className="search_wrapper">
-          <input type="search" placeholder="Find Job..."/>
-
-        <span className="search">
-          <FiSearch />
-        </span>
-
-        </div>
-
+        
        </div>
 
        <div className="intro_img">
