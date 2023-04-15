@@ -1,0 +1,40 @@
+.footer--wrapper{
+  background-color: $main-color;
+  color: $secondary-color;
+  padding: 1.2rem;
+
+  &__socials{
+    margin-bottom: 1.5rem;
+
+    h2{
+      @include fontmain(1.5rem);
+      margin-bottom: 1rem;
+    }
+    
+    .socials_wrapper{
+      display: flex;
+      justify-content: space-between;
+
+      .social{
+        padding: .6rem .7rem;
+        border: 2px solid $secondary-color;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__attribution{
+
+
+    p{
+      @include fontsecondary(.825rem, 400);
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer--wrapper{
+    padding: 3rem 4rem;
+  }
+}

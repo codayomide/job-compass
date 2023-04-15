@@ -134,16 +134,21 @@
   padding: 3rem 1.2rem;
 }
 .homepage--wrapper__intro {
-  padding: 2rem 0;
+  padding-top: 2rem;
+}
+.homepage--wrapper__intro .text {
+  width: 100%;
 }
 .homepage--wrapper__intro .text h1 {
   font-family: "Slabo 27px", serif;
-  font-size: 2.5rem;
+  font-size: 2.85rem;
   margin-bottom: 2rem;
+}
+.homepage--wrapper__intro .text .introBtn_link {
+  display: none;
 }
 .homepage--wrapper__intro .text .search_wrapper {
   position: relative;
-  display: none;
 }
 .homepage--wrapper__intro .text .search_wrapper input[type=search] {
   padding: 1rem;
@@ -160,19 +165,44 @@
   right: 0.4rem;
   font-weight: 500;
 }
+.homepage--wrapper__intro .intro_img {
+  display: none;
+  width: 100%;
+}
+.homepage--wrapper__intro .intro_img img {
+  width: 100%;
+  height: 100%;
+}
 .homepage--wrapper__employer {
-  padding: 2rem 0;
+  padding-top: 2rem;
+  position: relative;
+  height: 470px;
+}
+.homepage--wrapper__employer .employer-img {
+  width: 100%;
+  height: 100%;
+}
+.homepage--wrapper__employer .employer-img img {
+  width: 100%;
+  height: 100%;
+}
+.homepage--wrapper__employer .text {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 0;
+  background-color: #fff;
+  width: 100%;
 }
 .homepage--wrapper__employer .text p {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 .homepage--wrapper__employer .text h1 {
   font-family: "Slabo 27px", serif;
   font-size: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .homepage--wrapper__employer .text .btn_link {
   color: #fff;
@@ -183,26 +213,71 @@
   background-color: #3C84AB;
 }
 .homepage--wrapper__categories {
-  padding: 2rem 0;
+  padding-top: 2rem;
+}
+.homepage--wrapper__categories h1 {
+  font-family: "Slabo 27px", serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+.homepage--wrapper__categories .categories_wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
 }
 .homepage--wrapper__categories .category {
-  width: 100px;
-  height: 100px;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0.2rem;
   background-color: #3C84AB;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.homepage--wrapper__categories .category .icon {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
 }
 .homepage--wrapper__employee {
-  padding: 2rem 0;
+  padding-top: 2rem;
+  position: relative;
+  height: 470px;
+}
+.homepage--wrapper__employee .employee-img {
+  width: 100%;
+  height: 100%;
+}
+.homepage--wrapper__employee .employee-img img {
+  width: 100%;
+  height: 100%;
+}
+.homepage--wrapper__employee .text {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: #fff;
 }
 .homepage--wrapper__employee .text p {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 .homepage--wrapper__employee .text h1 {
   font-family: "Slabo 27px", serif;
   font-size: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .homepage--wrapper__employee .text .btn_link {
   color: #fff;
@@ -213,6 +288,198 @@
   background-color: #3C84AB;
 }
 
+@media screen and (min-width: 360px) {
+  .homepage--wrapper__intro .text h1 {
+    font-size: 3.5rem;
+  }
+  .homepage--wrapper__employer {
+    height: 450px;
+  }
+  .homepage--wrapper__employee {
+    height: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .homepage--wrapper {
+    padding: 3rem 4rem;
+  }
+  .homepage--wrapper__intro .text h1 {
+    font-size: 5rem;
+  }
+  .homepage--wrapper__intro .text .search_wrapper input[type=search] {
+    padding: 2rem;
+    border-radius: 4rem;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .homepage--wrapper__intro .text .search_wrapper .search {
+    padding: 1.8rem;
+    top: 0.55rem;
+    right: 1.2rem;
+  }
+  .homepage--wrapper__employer .text h1 {
+    font-size: 2.3rem;
+  }
+  .homepage--wrapper__categories .categories_wrapper {
+    grid-template-columns: auto auto auto;
+  }
+  .homepage--wrapper__employee .text h1 {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .homepage--wrapper__intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .homepage--wrapper__intro .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .homepage--wrapper__intro .text h1 {
+    font-size: 4.3rem;
+  }
+  .homepage--wrapper__intro .text .introBtn_link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1.3rem 3rem;
+    border-radius: 5rem;
+    width: 15rem;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #3C84AB;
+  }
+  .homepage--wrapper__intro .text .search_wrapper {
+    display: none;
+  }
+  .homepage--wrapper__intro .intro_img {
+    display: block;
+  }
+  .homepage--wrapper__employer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .homepage--wrapper__employer .text {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem;
+  }
+  .homepage--wrapper__employer .text h1 {
+    font-size: 2.3rem;
+  }
+  .homepage--wrapper__employer .text .btn_link {
+    width: 12rem;
+    padding: 1.2rem;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .homepage--wrapper__categories h1 {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+  }
+  .homepage--wrapper__categories .categories_wrapper {
+    grid-template-columns: auto auto auto auto;
+  }
+  .homepage--wrapper__categories .category {
+    padding: 1.5rem 1rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .homepage--wrapper__categories .category .icon {
+    font-size: 2rem;
+  }
+  .homepage--wrapper__employee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .homepage--wrapper__employee .text {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem;
+  }
+  .homepage--wrapper__employee .text h1 {
+    font-size: 2.3rem;
+  }
+  .homepage--wrapper__employee .text .btn_link {
+    width: 12rem;
+    padding: 1.2rem;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
 .signup--page__wrapper {
   background-color: red;
 }
+
+.footer--wrapper {
+  background-color: #3C84AB;
+  color: #fff;
+  padding: 1.2rem;
+}
+.footer--wrapper__socials {
+  margin-bottom: 1.5rem;
+}
+.footer--wrapper__socials h2 {
+  font-family: "Slabo 27px", serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.footer--wrapper__socials .socials_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer--wrapper__socials .socials_wrapper .social {
+  padding: 0.6rem 0.7rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.footer--wrapper__attribution p {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 0.825rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer--wrapper {
+    padding: 3rem 4rem;
+  }
+}/*# sourceMappingURL=style.css.map */
