@@ -3,6 +3,7 @@ import './assets/styles/css/style.css';
 import Logo from './assets/logo.png';
 import Home from './Home';
 import SignUp from './SignUp';
+import Login from './Login';
 import Footer from './Footer';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
     <Routes>
       <Route exact path="/" element={ <Home/> } />
       <Route exact path="/SignUp" element={ <SignUp/> } />
+      <Route exact path="/Login" element={ <Login /> } />
     </Routes>
 
       <Footer />
