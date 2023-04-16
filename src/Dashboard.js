@@ -29,7 +29,7 @@ const Dashboard = () => {
         .then((data) => {
           setUserData(data.data);
           setLoading(false);
-        });vb
+        });
       } catch (err) {
         console.log(err);
       }
