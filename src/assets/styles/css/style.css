@@ -545,8 +545,13 @@
   background-color: #fff;
   -webkit-box-shadow: 0.4px 0.4px 4px #000;
           box-shadow: 0.4px 0.4px 4px #000;
-  width: 100%;
+  width: 35%;
   padding: 1.2rem 1rem;
+}
+@media screen and (max-width: 768px) {
+  .form {
+    width: 100%;
+  }
 }
 .form * {
   font-family: "Fira Sans Condensed", sans-serif;

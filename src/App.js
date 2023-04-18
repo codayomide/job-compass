@@ -1,4 +1,4 @@
-import{ Route, Routes, Link} from 'react-router-dom'
+import{ Route, Routes, Link } from 'react-router-dom'
 import './assets/styles/css/style.css';
 import { BsSearch } from 'react-icons/bs'
 import Logo from './assets/logo.png';
@@ -6,6 +6,8 @@ import Home from './Home';
 import SignUp from './SignUp';
 import Login from './Login';
 import Footer from './Footer';
+import PrivateRoute from './PrivateRoute';
+import Dashboard from './Dashboard';
 
 function App() {
 
@@ -37,8 +39,9 @@ function App() {
               <div> <input type="search" placeholder="Search..." > 
               </input>
               <button><BsSearch className="search"/></button> </div>
-              <li> <Link to="/SignUp" className="link" > Sign Up </Link> </li>
-              <li> <Link to="/Login" className="link"> Login </Link> </li>
+              <li> <PrivateRoute path="/dashboard" component={Dashboard} /> </li>
+              <li> <Link to="/register" className="link" > Sign Up </Link> </li>
+              <li> <Link to="/login" className="link"> Login </Link> </li>
 
             </ul>
 
@@ -58,8 +61,9 @@ function App() {
       
     <Routes>
       <Route exact path="/" element={ <Home/> } />
-      <Route exact path="/SignUp" element={ <SignUp/> } />
-      <Route exact path="/Login" element={ <Login /> } />
+      <Route exact path="/register" element={ <SignUp/> } />
+      <Route exact path="/login" element={ <Login /> } />
+      <Route exact path="/dashboard" element={ <Dashboard />} />
     </Routes>
 
       <Footer />
