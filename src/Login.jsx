@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from 'react';
+import Navbar from "./Navbar";
 
 const Login = () => {
     const [token, setToken] = useState(null);
@@ -38,6 +39,7 @@ const Login = () => {
 
     return ( 
         <div id="login-page">
+            <Navbar />
             <form className="form" onSubmit={handleSubmit(onFormSubmit)}>
             <h2>Log in</h2>
 

@@ -1,5 +1,6 @@
 import { BiCodeAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 import img1 from "./assets/images/3.jpg";
 import img2 from "./assets/images/4.jpg";
 import img3 from "./assets/images/7.png";
@@ -8,6 +9,7 @@ import img3 from "./assets/images/7.png";
 const Home = () => {
   return ( 
     <div className="homepage--wrapper">
+      <Navbar /> 
       <div className="homepage--wrapper__intro">
        <div className="text">
        <h1>
