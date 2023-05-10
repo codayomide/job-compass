@@ -4,10 +4,16 @@ import { BsSearch } from 'react-icons/bs';
 import PrivateRoute from './PrivateRoute';
 import Dashboard from './Dashboard';
 
+import { useState } from 'react';
+
 function Navbar () {
-  const handleToggle = () => {
-    console.log("ITs working")
+  
+  const [menu, setMenu] = useState('open-menu');
+
+  const toggleMenu = () => {
+    setMenu(menu === 'open-menu' ? 'close-menu' : 'open-menu');
   }
+
   return(
     // <nav className="nav--wrapper">
     //     <div className="menu-btn" onClick={handleToggle}>
@@ -49,7 +55,7 @@ function Navbar () {
     <div className="nav-bar">
       <nav className="mnav--wrapper">
             <div className="mnav--wrapper__left">
-              <div className="burger">
+              <div className="burger" onClick={toggleMenu}>
                 <span id="bar-1"></span>
                 <span id="bar-2"></span>
                 <span id="bar-3"></span>
@@ -62,7 +68,7 @@ function Navbar () {
 
             {/* FOR CONTENT ON THE MENU */}
 
-            <div className="open">
+            <div className={menu}>
               <ul>
                 
               </ul>
@@ -74,6 +80,27 @@ function Navbar () {
               <Link to="/register" className="link" > Sign Up </Link>
               <Link to="/login" className="link" > Login </Link>
             </div>
+      </nav>
+
+      <nav className="dnav--wrapper">
+        <div className="dnav--wrapper__left">
+          <div className="logo">
+                <img src={Logo} alt="company-logo" />
+          </div>
+          <div className="links">
+            <Link to="/" className="link">Categories</Link>
+            <Link to="/" className="link">Blog</Link>
+          </div>
+        </div>
+
+        <div className="dnav--wrapper__right">
+          <input type="search" />
+
+          <div className="links">
+            <Link className="link">Login</Link>
+            <Link className="link">Signup</Link>
+          </div>
+        </div>
       </nav>
     </div>
   )

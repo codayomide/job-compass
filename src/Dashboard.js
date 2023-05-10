@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navin from './Navin';
+import Dash from './Dash';
 
 const Dashboard = () => {
   const [userData, setUserData] = useState({});
@@ -39,6 +41,8 @@ const Dashboard = () => {
 
   return (
     <div id="login-page">
+      <Navin />
+      <Dash />
       {loading ? (
         <p>Loading...</p>
       ) : (
