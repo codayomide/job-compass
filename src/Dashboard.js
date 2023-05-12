@@ -44,7 +44,13 @@ const Dashboard = () => {
     <div id="login-page">
       <Navin />
       <Dash />
-      <Jobcard />
+      <main id="jobs-container">
+        <h1 id="jobs-container__header">Jobs</h1>
+
+        <section id="jobs-container__main">
+          <Jobcard />
+        </section>
+      </main>
       {/* {loading ? (
         <p>Loading...</p>
       ) : (
