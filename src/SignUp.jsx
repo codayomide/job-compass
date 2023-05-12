@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import Navbar from "./Navbar";
 
 const SignUp = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -66,6 +67,7 @@ const SignUp = () => {
 
   return ( 
     <div id="signup-page">
+      <Navbar />
       <form className="form" onSubmit={handleSubmit(onFormSubmit)}>
         <h2>Sign Up</h2>
 

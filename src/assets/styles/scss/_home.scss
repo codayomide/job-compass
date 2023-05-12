@@ -1,9 +1,8 @@
 .homepage--wrapper{
-  padding: 3rem 1.2rem;
-  
+  padding: 0;
 
   &__intro{
-    padding-top: 2rem;
+    padding-top: 0;
     
     .text{
       width: 100%;
@@ -265,7 +264,7 @@
 
 @media screen and (min-width: 1024px){
   .homepage--wrapper{
-    padding: 5rem 6rem;
+    padding: 0 6rem;
 
     &__intro{
       display: flex;
