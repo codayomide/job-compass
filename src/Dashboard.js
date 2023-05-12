@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navin from './Navin';
 import Dash from './Dash';
+import Jobcard from './Jobcard';
 
 const Dashboard = () => {
   const [userData, setUserData] = useState({});
@@ -43,7 +44,8 @@ const Dashboard = () => {
     <div id="login-page">
       <Navin />
       <Dash />
-      {loading ? (
+      <Jobcard />
+      {/* {loading ? (
         <p>Loading...</p>
       ) : (
         <div>
@@ -52,7 +54,7 @@ const Dashboard = () => {
         </div>
       )}
 
-      <button  className="submit-btn" onClick={handleLogout}>Logout</button>
+      <button  className="submit-btn" onClick={handleLogout}>Logout</button> */}
     </div>
   );
 };
