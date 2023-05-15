@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navin from './Navin';
 import Dash from './Dash';
-import Jobcard from './Jobcard';
+import Jobcards from './Jobcards';
 
 const Dashboard = () => {
   const [userData, setUserData] = useState({});
@@ -46,10 +46,7 @@ const Dashboard = () => {
       <Dash />
       <main id="jobs-container">
         <h1 id="jobs-container__header">Jobs</h1>
-
-        <section id="jobs-container__main">
-          <Jobcard />
-        </section>
+        <Jobcards />
       </main>
       {/* {loading ? (
         <p>Loading...</p>
