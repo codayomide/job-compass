@@ -35,7 +35,7 @@ const Jobcards = () => {
         <h2 className="job-card__title">{job.title}</h2>
   
         <div className="job-card__price">
-          <h3 className="price">$200 - $500</h3>
+          <h3 className="price">{`₦${job.offer.lowest} - ₦${job.offer.highest}`}</h3>
           <small className="section-name">Budget</small>
         </div>
   
@@ -46,6 +46,8 @@ const Jobcards = () => {
             <button key={index} className="tag">{keyword}</button>
           ))}
         </div>
+
+        <div>Apply Now...</div>
       </div>
       ))}
     </section>
