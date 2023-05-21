@@ -21,7 +21,7 @@ $dark-grey: #c2cbd1;
 .job-card {
   background-color: #f3f3f3;
   margin-bottom: .25rem;
-  width: 16rem;
+  width: 25rem;
 
   border-bottom: solid 1px rgba($main-color, 0.3);
   padding: 1rem;
@@ -33,11 +33,11 @@ $dark-grey: #c2cbd1;
 
   &__title {
     font-size: 22px;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
   }
 
   &__price {
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
   }
 
   &__description {
@@ -49,15 +49,18 @@ $dark-grey: #c2cbd1;
   &__tags-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
 
 
     .tag {
       font-size: 16px;
+      width: fit-content;
       background: rgba($main-color, 0.3);
       border: none;
       color: #617985;
-      margin-right: 0.5rem;
-      padding: 3px 10px;
+      margin: 0 0.5rem 1rem 0;
+      padding: 0.5rem;
       border-radius: 10rem;
       font-weight: 600;
     }
