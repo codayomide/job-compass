@@ -1,94 +1,85 @@
 .navin--wrapper{
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
+  padding: 0 6rem;
+  height: 5rem;
   z-index: 2;
-  background-color: #fff;
-  
-  padding: .75rem;
-  border-bottom: 1px solid #000;
 
-  display: flex;
+  @include flex(row);
   justify-content: space-between;
   align-items: center;
 
-  .burger{
-    width: 2rem;
-    height: 1.75rem;
-    margin-right: .5rem;
-    position: absolute;
-    top: 1rem;
-
-
-    span{
-      height: 2px;
-      width: 2rem;
-      background-color: #000;
-      display: block;
-      position: absolute;
-      
-    }
-
-    #bar-1{
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, 3px);
-    }
-    #bar-2{
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    #bar-3{
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, -5px);
-    }
-    
-  }
-
+  background-color: aliceblue;
 
   .logo{
-    margin-left: 3rem;
-
-    img{
-      width: 2.5rem;
-      aspect-ratio: 6/4;
-    }
+    @include fontmain(2rem);
   }
 
-  .content{
-
-    .icon{
-      font-size: 1.75rem;
-      margin-left: .5rem;
-    }
-  }
-}
+  .navin--links{
+    @include flex(row);
+    align-items: center;
 
 
-@media screen and (min-width: 1024px) {
-  .navin--wrapper{
-    padding: 1rem 3rem; 
+    input{
+      width: 24rem;
+      height: 3rem;
+      padding: 1rem;
 
-    .burger{
-      display: none;
+      border-radius: .5rem;
     }
 
-    .logo{
-      margin-left: 0;
-
-      img{
-        width: 4rem;
-      }
+    .view--actions{
+      margin-left: 5rem;
+      padding: 1rem;
+      border: 1px solid #000;
+      border-radius: .5rem;
     }
 
-    .content{
+    .user--info{
+      margin-left: 5rem;
+      position: relative;
 
-      .icon{
+      @include flex(row);
+      align-items: center;
+      cursor: pointer;
+
+      .user-logo{
         font-size: 2rem;
       }
+
+      .dropdown{
+        position: absolute;
+        left: -3rem;
+        top: 3rem;
+
+
+        width: 15rem;
+        backdrop-filter: blur(12px);
+
+        .dropdown-content{
+          padding: .5rem;
+
+          li{
+            padding: .75rem;
+            margin-bottom: .75rem;
+            border-radius: .5rem;
+          }
+          
+          button{
+            padding: .75rem;
+            margin-bottom:.75rem;
+            width: 100%;
+            border: none;
+            border-radius: .5rem;
+          }
+        }
+      }
+
+      .hide{
+        display: none;
+      }
     }
-  }
+}
+
 }
