@@ -1,24 +1,46 @@
-import Logo from './assets/logo.png';
-import { BiUser } from 'react-icons/bi';
-import { BsArrowRight } from 'react-icons/bs';
-
+import { FaRegUserCircle } from 'react-icons/fa';
+import { AiOutlineDown } from 'react-icons/ai';
+import { useState } from 'react';
 
 function Navin () {
  
+  const [drop, setDrop] = useState("dropdown");
+
+  const show = () => {
+    setDrop(drop === "hide" ? "dropdown" : "hide" );
+  }
+
+
   return(
     <nav className="navin--wrapper">
-      <div className="burger">
-                <span id="bar-1"></span>
-                <span id="bar-2"></span>
-                <span id="bar-3"></span>
-              </div>
       <div className="logo">
-        <img src={Logo} alt="" />
+        <h1>Jolt</h1>
       </div>
 
-      <div className="content">
-        <BiUser className='icon'/>
-        <BsArrowRight className='icon' />
+      <div className="navin--links">
+        <input type="search" placeholder="Search anything..."/>
+
+        <div className="view--actions">
+          View Actions
+        </div>
+
+        <div className="user--info" onClick={show}>
+          <FaRegUserCircle className="user-logo"/>
+
+          <p style={{marginLeft: ".5rem"}}> Hi, Joshua</p>
+
+          <AiOutlineDown style={{marginLeft: ".5rem"}} />
+
+          <div className={drop}>
+              <ul className="dropdown-content">
+                <li>My Account</li>
+                <li>My finance</li>
+                <li>My Update</li>
+                <button>Logout</button>
+              </ul>
+          </div>
+        </div>
+
       </div>
     </nav>
   )
