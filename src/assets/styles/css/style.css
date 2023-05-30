@@ -585,13 +585,43 @@
 
 @media screen and (min-width: 1020px) {
   .dash--wrapper {
-    width: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 7rem 2rem 2rem;
+    width: 18rem;
     height: 100vh;
-    background-color: #4646a8;
+    background-color: #cecee9;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
+  }
+  .dash--wrapper .dash--items {
+    display: flex;
+    flex-direction: column;
+  }
+  .dash--wrapper .dash--items .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    font-family: "Slabo 27px", serif;
+    font-size: 1.2rem;
+    background-color: #e7e7e7;
+    border-radius: 0.5rem;
+  }
+  .dash--wrapper .create--job__btn {
+    font-family: "Slabo 27px", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    word-spacing: 1rem;
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
   }
 }
 #jobs-container * {
