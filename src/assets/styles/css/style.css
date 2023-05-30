@@ -589,6 +589,20 @@
     padding: 3rem 4rem;
   }
 }
+.dashboardRoute {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+  margin: 6rem 0 0 24rem;
+}
+
 .navin--wrapper {
   position: absolute;
   top: 0;
@@ -680,9 +694,6 @@
     z-index: 1;
   }
 }
-#jobs-container {
-  margin: 4rem 0 0 24rem;
-}
 #jobs-container * {
   font-family: "Fira Sans Condensed", sans-serif;
 }
@@ -698,10 +709,17 @@
 
 .job-card {
   background-color: #f3f3f3;
+  text-decoration: none;
+  color: #000000;
   margin-bottom: 0.25rem;
   width: 25rem;
   border-bottom: solid 1px rgba(60, 132, 171, 0.3);
   padding: 1rem;
+  cursor: pointer;
+}
+.job-card:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 .job-card .section-name {
   font-size: 14px;
@@ -743,4 +761,9 @@
   padding: 0.5rem;
   border-radius: 10rem;
   font-weight: 600;
+}
+
+.job-apply {
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
