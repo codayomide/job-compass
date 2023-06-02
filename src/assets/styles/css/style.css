@@ -589,99 +589,174 @@
     padding: 3rem 4rem;
   }
 }
-.navin--wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
+.dashboardRoute {
   background-color: #fff;
-  padding: 0.75rem;
-  border-bottom: 1px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+  margin: 6rem 0 0 24rem;
+}
+
+.navin--wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 6rem;
+  height: 5rem;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.navin--wrapper .burger {
-  width: 2rem;
-  height: 1.75rem;
-  margin-right: 0.5rem;
-  position: absolute;
-  top: 1rem;
-}
-.navin--wrapper .burger span {
-  height: 2px;
-  width: 2rem;
-  background-color: #000;
-  display: block;
-  position: absolute;
-}
-.navin--wrapper .burger #bar-1 {
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
-}
-.navin--wrapper .burger #bar-2 {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.navin--wrapper .burger #bar-3 {
-  top: 100%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -5px);
-          transform: translate(-50%, -5px);
+  background-color: aliceblue;
 }
 .navin--wrapper .logo {
-  margin-left: 3rem;
+  font-family: "Slabo 27px", serif;
+  font-size: 2rem;
 }
-.navin--wrapper .logo img {
-  width: 2.5rem;
-  aspect-ratio: 6/4;
+.navin--wrapper .navin--links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.navin--wrapper .content .icon {
-  font-size: 1.75rem;
-  margin-left: 0.5rem;
+.navin--wrapper .navin--links input {
+  width: 24rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.navin--wrapper .navin--links .view--actions {
+  margin-left: 5rem;
+  padding: 1rem;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+}
+.navin--wrapper .navin--links .user--info {
+  margin-left: 5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.navin--wrapper .navin--links .user--info .user-logo {
+  font-size: 2rem;
+}
+.navin--wrapper .navin--links .user--info .dropdown {
+  position: absolute;
+  left: -3rem;
+  top: 3rem;
+  width: 15rem;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
+.navin--wrapper .navin--links .user--info .dropdown .dropdown-content {
+  padding: 0.5rem;
+}
+.navin--wrapper .navin--links .user--info .dropdown .dropdown-content li {
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+}
+.navin--wrapper .navin--links .user--info .dropdown .dropdown-content button {
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+}
+.navin--wrapper .navin--links .user--info .hide {
+  display: none;
 }
 
-@media screen and (min-width: 1024px) {
-  .navin--wrapper {
-    padding: 1rem 3rem;
-  }
-  .navin--wrapper .burger {
-    display: none;
-  }
-  .navin--wrapper .logo {
-    margin-left: 0;
-  }
-  .navin--wrapper .logo img {
-    width: 4rem;
-  }
-  .navin--wrapper .content .icon {
-    font-size: 2rem;
-  }
-}
 @media screen and (min-width: 1020px) {
   .dash--wrapper {
-    width: 24rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 7rem 2rem 2rem;
+    width: 18rem;
     height: 100vh;
-    background-color: #4646a8;
+    background-color: #cecee9;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
   }
-}
-#jobs-container {
-  margin: 4rem 0 0 24rem;
+  .dash--wrapper .dash--items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dash--wrapper .dash--items .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    font-family: "Slabo 27px", serif;
+    font-size: 1.2rem;
+    background-color: #e7e7e7;
+    border-radius: 0.5rem;
+  }
+  .dash--wrapper .create--job__btn {
+    font-family: "Slabo 27px", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    word-spacing: 1rem;
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+  }
 }
 #jobs-container * {
   font-family: "Fira Sans Condensed", sans-serif;
@@ -698,10 +773,17 @@
 
 .job-card {
   background-color: #f3f3f3;
+  text-decoration: none;
+  color: #000000;
   margin-bottom: 0.25rem;
   width: 25rem;
   border-bottom: solid 1px rgba(60, 132, 171, 0.3);
   padding: 1rem;
+  cursor: pointer;
+}
+.job-card:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 .job-card .section-name {
   font-size: 14px;
@@ -743,4 +825,13 @@
   padding: 0.5rem;
   border-radius: 10rem;
   font-weight: 600;
+}
+
+.job-apply {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+a {
+  text-decoration: none;
 }

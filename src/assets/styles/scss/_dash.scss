@@ -5,14 +5,50 @@
 
 @media screen and (min-width: 1020px) {
   .dash--wrapper{
-    width: 24rem;
+    @include flex(column);
+    justify-content: space-between;
+
+    padding: 7rem 2rem 2rem;;
+    width: 18rem;
     height: 100vh;
-    background-color: #4646a8;
-  
-  
+
+    background-color: #cecee9;
+
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
+
+    .dash--items{
+      @include flex(column);
+
+      .item{
+        @include flex(row);
+        align-items: center;
+
+        padding: .75rem;
+        margin: .5rem 0;
+        @include fontmain(1.2rem);
+
+        background-color: #e7e7e7;
+        border-radius: .5rem;
+
+      }
+    }
+
+    .create--job{
+
+
+      &__btn{
+        @include fontmain(1.2rem);
+        font-weight: 600;
+        word-spacing: 1rem;
+        letter-spacing: 2px;
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-radius: .5rem;
+      }
+    }
   }
 }
