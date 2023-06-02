@@ -1,4 +1,4 @@
-import Jobcards from "./Jobcards";
+import Jobcards from "../App/Cards/Jobcards";
 
 const JobsContainer = () => {
   return ( 

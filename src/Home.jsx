@@ -1,6 +1,6 @@
 import { BiCodeAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from './App/Navbar';
 import img1 from "./assets/images/3.jpg";
 import img2 from "./assets/images/4.jpg";
 import img3 from "./assets/images/7.png";

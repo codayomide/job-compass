@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import Dash from './Dash';
 import Navin from './Navin';
-import Dashboard from './Dashboard';
-import CreateJobs from './CreateJobs';
-import JobsContainer from './JobsContainer';
-import JobApplyPage from './JobApplyPage';
+import Dashboard from '../Dashboard/';
+import CreateJobs from '../Listings/CreateJobs';
+import JobsContainer from '../Listings/JobsContainer';
+import JobApplyPage from '../Listings/JobApplyPage';
 
 const DashboardRoutes = () => {
   return (
