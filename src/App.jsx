@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './assets/styles/css/style.css';
 import Home from './Home';
-import SignUp from './SignUp';
-import Login from './Login';
-import Footer from './Footer';
-import DashboardRoutes from './DashboardRoutes';
+import SignUp from './Auth/SignUp';
+import Login from './Auth/Login';
+import Footer from './App/Footer';
+import DashboardRoutes from './App/DashboardRoutes';
 
 function App() {
 

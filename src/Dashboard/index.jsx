@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Routes, useNavigate } from 'react-router-dom';
-import Navin from './Navin';
-import Dash from './Dash';
-import Jobcards from './Jobcards';
-import JobsContainer from './JobsContainer';
+import Navin from '../App/Navin';
+import Dash from '../App/Dash';
+import Jobcards from '../App/Cards/Jobcards';
+import JobsContainer from '../Listings/JobsContainer';
 
 const Dashboard = () => {
   const [userData, setUserData] = useState({});

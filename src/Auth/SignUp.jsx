@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
-import Navbar from "./Navbar";
+import Navbar from "../App/Navbar";
 
 const SignUp = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();

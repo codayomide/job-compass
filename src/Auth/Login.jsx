@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from 'react';
-import Navbar from "./Navbar";
+import Navbar from "../App/Navbar";
 
 const Login = () => {
     const [token, setToken] = useState(null);
