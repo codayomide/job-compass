@@ -1,10 +1,10 @@
-import Jobcards from "../App/Cards/Jobcards";
+import DefaultJobs from "./Jobs";
 
 const JobsContainer = () => {
   return ( 
     <main id="jobs-container" className="dashboardRoute">
-      <h1 id="jobs-container__header">Jobs</h1>
-      <Jobcards />
+      <h1 id="jobs-container__header">Recent Jobs</h1>
+      <DefaultJobs />
     </main>
   );
 }

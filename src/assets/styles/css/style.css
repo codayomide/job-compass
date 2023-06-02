@@ -681,8 +681,7 @@ h1, h2, h3, h4, h5, h6 {
   left: -3rem;
   top: 3rem;
   width: 15rem;
-  -webkit-backdrop-filter: blur(12px);
-          backdrop-filter: blur(12px);
+  background-color: antiquewhite;
 }
 .navin--wrapper .navin--links .user--info .dropdown .dropdown-content {
   padding: 0.5rem;
