@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function Navin () {
  
-  const [drop, setDrop] = useState("dropdown");
+  const [drop, setDrop] = useState("hide");
 
   const show = () => {
     setDrop(drop === "hide" ? "dropdown" : "hide" );
@@ -17,9 +17,11 @@ function Navin () {
         <h1>Jolt</h1>
       </div>
 
-      <div className="navin--links">
+      <div className="navin--search">
         <input type="search" placeholder="Search anything..."/>
+      </div>
 
+      <div className="navin--links">
         <div className="view--actions">
           View Actions
         </div>

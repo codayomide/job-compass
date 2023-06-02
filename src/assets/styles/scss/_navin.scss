@@ -13,14 +13,10 @@
   background-color: aliceblue;
 
   .logo{
-    @include fontmain(2rem);
+    // @include fontmain(2rem);
   }
 
-  .navin--links{
-    @include flex(row);
-    align-items: center;
-
-
+  .navin--search {
     input{
       width: 24rem;
       height: 3rem;
@@ -29,6 +25,11 @@
       border-radius: .5rem;
     }
 
+  }
+
+  .navin--links{
+    @include flex(row);
+    align-items: center;
     .view--actions{
       margin-left: 5rem;
       padding: 1rem;
