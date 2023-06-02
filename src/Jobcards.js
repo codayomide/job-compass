@@ -7,6 +7,8 @@ const Jobcards = () => {
 
   const [loading, setLoading] = useState(true);
 
+  const formatter = new Intl.NumberFormat('en-US');
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -35,24 +37,24 @@ const Jobcards = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (jobsArray.map((job, index) => (
-        <Link key={index} to={`/dashboard/jobs/apply`} className="job-card">
+        <div className="job-card">
           <h2 className="job-card__title">{job.title}</h2>
     
           <div className="job-card__price">
-            <h3 className="price">{`₦${job.offer.lowest} - ₦${job.offer.highest}`}</h3>
+            <h3 className="price">{`₦${formatter.format(job.offer.lowest)} - ₦${formatter.format(job.offer.highest)}`}</h3>
             <small className="section-name">Budget</small>
           </div>
-    
+
           <p className="job-card__description">{job.desc}</p>
-    
+
           <div className="job-card__tags-container">
             {job.keywords.map((keyword, index) => (
               <button key={index} className="tag">{keyword}</button>
             ))}
           </div>
 
-          <div>Apply Now...</div>
-        </Link>
+          <Link key={index} to={`/dashboard/job/${job._id}/`}>Apply Now...</Link>
+        </div>
       )))}
     </section>
   )

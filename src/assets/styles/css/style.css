@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&family=Slabo+27px&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,14 @@
           box-sizing: border-box;
   list-style: none;
   scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: "Lato";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins";
 }
 
 .nav-bar {
@@ -625,9 +634,11 @@
           align-items: center;
   background-color: aliceblue;
 }
-.navin--wrapper .logo {
-  font-family: "Slabo 27px", serif;
-  font-size: 2rem;
+.navin--wrapper .navin--search input {
+  width: 24rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 .navin--wrapper .navin--links {
   display: -webkit-box;
@@ -640,12 +651,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.navin--wrapper .navin--links input {
-  width: 24rem;
-  height: 3rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
 }
 .navin--wrapper .navin--links .view--actions {
   margin-left: 5rem;

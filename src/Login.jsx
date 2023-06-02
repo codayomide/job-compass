@@ -27,6 +27,7 @@ const Login = () => {
             localStorage.setItem('token', token);
 
             setToken(token);
+            console.log(token)
 
             window.location.href = '/dashboard';
 

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&family=Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 $main-color: #3C84AB;
 $secondary-color: #fff;
@@ -31,6 +32,12 @@ $secondary-font: 'Fira Sans Condensed', sans-serif;
   scroll-behavior: smooth;
 }
 
+html, body {
+  font-family: 'Lato';
+}
 
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Poppins';
+}
 
 

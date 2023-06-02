@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function Navbar () {
   
-  const [menu, setMenu] = useState('open-menu');
+  const [menu, setMenu] = useState('close-menu');
 
   const toggleMenu = () => {
     setMenu(menu === 'open-menu' ? 'close-menu' : 'open-menu');
