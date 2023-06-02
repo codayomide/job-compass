@@ -97,8 +97,8 @@ function Navbar () {
           <input type="search" />
 
           <div className="links">
-            <Link className="link">Login</Link>
-            <Link className="link">Signup</Link>
+            <Link to="/login" className="link">Login</Link>
+            <Link to="/signup" className="link">Signup</Link>
           </div>
         </div>
       </nav>
