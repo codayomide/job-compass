@@ -4,7 +4,7 @@ import {FaSuitcase} from 'react-icons/fa';
 import {GrMoney} from 'react-icons/gr';
 import {GrUpdate} from 'react-icons/gr';
 import {BsListColumnsReverse} from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function Dash () {
 
