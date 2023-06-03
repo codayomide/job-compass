@@ -131,9 +131,24 @@
         background-color: $danger;
         color: $neutral;
         cursor: pointer;
-
         font-size: 16px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      
+        &:hover {
+          background-color: darken($danger, 10%);
+          transform: translateY(-2px);
+        }
+      
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(30, 56, 136, 0.5);
+        }
+      
+        &:active {
+          transform: translateY(2px);
+        }
       }
+      
       
     }
 
