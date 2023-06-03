@@ -1,12 +1,21 @@
 import { FaRegUserCircle } from 'react-icons/fa';
 import { AiOutlineArrowDown, AiOutlineArrowUp } from 'react-icons/ai';
 import { FiSearch } from 'react-icons/fi';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Navin() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      const parsedUser = JSON.parse(storedUser);
+      setUser(parsedUser);
+    }
+  }, []);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -14,8 +23,8 @@ function Navin() {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    navigate('/login', {replace: true});
-  }
+    navigate('/login', { replace: true });
+  };
 
   return (
     <nav className="navin--wrapper">
@@ -37,7 +46,7 @@ function Navin() {
       <div className="user" onClick={toggleDropdown}>
         <div className="__info">
           <FaRegUserCircle className="user-logo" />
-          <p style={{ paddingLeft: '.5rem' }}>Hi, Joshua</p>
+          <p style={{ paddingLeft: '.5rem' }}>Hi, {user?.name}</p>
           {showDropdown ? (
             <AiOutlineArrowUp className="menu_d_icon" style={{ paddingLeft: '.5rem' }} />
           ) : (
