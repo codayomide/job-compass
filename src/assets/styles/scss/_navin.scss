@@ -1,86 +1,144 @@
-.navin--wrapper{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 0 6rem;
-  height: 5rem;
-  z-index: 2;
-
+.navin--wrapper {
   @include flex(row);
   justify-content: space-between;
   align-items: center;
+  background: $primary;
+  color: $neutral;
+  width: 100%;
+  height: 80px;
+  padding: 12px 32px;
+  user-select: none;
+  overflow-y: hidden;
 
-  background-color: aliceblue;
+  // Experimental
+  position: fixed;
+  z-index: 99;
 
-  .logo{
-    // @include fontmain(2rem);
+  .logo {
+    font-size: 32px;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family: 'Poppins Verdana';
   }
 
   .navin--search {
-    input{
-      width: 24rem;
-      height: 3rem;
-      padding: 1rem;
-
-      border-radius: .5rem;
-    }
-
-  }
-
-  .navin--links{
     @include flex(row);
     align-items: center;
-    .view--actions{
-      margin-left: 5rem;
+    width: 50%;
+    height: 48px;
+  
+    input {
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+      font-weight: 500;
       padding: 1rem;
-      border: 1px solid #000;
-      border-radius: .5rem;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border: none;
+      outline: none;
     }
+  
+    .searchIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $neutral;
+      padding: 0 12px;
+      cursor: pointer;
+      font-size: 36px;
+      color: $primary;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+      height: 100%;
+    }
+  }  
 
-    .user--info{
-      margin-left: 5rem;
-      position: relative;
+  .view--actions {
+    padding: 1rem;
+    border: 1px solid $neutral;
+    border-radius: 12px;
+    transition: background .3s linear;
 
+    &:hover {
+      background-color: $neutral;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border: 1px solid $neutral;
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+
+  .user {
+    .__info {
       @include flex(row);
       align-items: center;
       cursor: pointer;
 
-      .user-logo{
-        font-size: 2rem;
+      .user-logo {
+        font-size: 32px;
       }
 
-      .dropdown{
-        position: absolute;
-        left: -3rem;
-        top: 3rem;
-
-
-        width: 15rem;
-        background-color: antiquewhite;
-
-        .dropdown-content{
-          padding: .5rem;
-
-          li{
-            padding: .75rem;
-            margin-bottom: .75rem;
-            border-radius: .5rem;
-          }
-          
-          button{
-            padding: .75rem;
-            margin-bottom:.75rem;
-            width: 100%;
-            border: none;
-            border-radius: .5rem;
-          }
-        }
-      }
-
-      .hide{
-        display: none;
+      .menu_d_icon {
+        font-size: 28px;
       }
     }
-}
 
+    .dropdown {
+      margin-top: 24px;
+      padding: 12px 0;
+      position: fixed;
+      background-color: $secondary;
+      color: $neutral;
+      width: 280px;
+      right: 0;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .dropdown-link {
+        display: block;
+        padding: 12px;
+        margin: 0 2px;
+        color: $neutral;
+        text-decoration: none;
+
+        &:hover {
+          background: $neutral;
+          color: $primary;
+        }
+
+      }
+
+      button {
+        width: calc(100% - 24px);
+        display: block;
+        margin: 12px 12px;
+        padding: 16px 0;
+        border-radius: 12px;
+        border: none;
+        background-color: $danger;
+        color: $neutral;
+        cursor: pointer;
+
+        font-size: 16px;
+      }
+      
+    }
+
+    .hide {
+      display: none;
+    }
+  }
 }

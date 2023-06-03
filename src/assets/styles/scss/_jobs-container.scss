@@ -1,0 +1,13 @@
+#jobs_container {
+  #__header {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+}
+
+#default_jobs{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}

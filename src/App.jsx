@@ -4,7 +4,7 @@ import Home from './Home';
 import SignUp from './Auth/SignUp';
 import Login from './Auth/Login';
 import Footer from './App/Footer';
-import DashboardRoutes from './App/DashboardRoutes';
+import DashboardRoutes from './App/index';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
         <Route path="/dashboard/*" element={ <DashboardRoutes />} />
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

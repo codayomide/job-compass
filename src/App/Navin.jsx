@@ -1,51 +1,51 @@
 import { FaRegUserCircle } from 'react-icons/fa';
-import { AiOutlineDown } from 'react-icons/ai';
+import { AiOutlineArrowDown, AiOutlineArrowUp } from 'react-icons/ai';
+import { FiSearch } from 'react-icons/fi';
 import { useState } from 'react';
 
-function Navin () {
- 
-  const [drop, setDrop] = useState("hide");
+function Navin() {
+  const [showDropdown, setShowDropdown] = useState(false);
 
-  const show = () => {
-    setDrop(drop === "hide" ? "dropdown" : "hide" );
-  }
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
-
-  return(
+  return (
     <nav className="navin--wrapper">
       <div className="logo">
         <h1>Jolt</h1>
       </div>
 
       <div className="navin--search">
-        <input type="search" placeholder="Search anything..."/>
+        <input type="search" placeholder="Search anything..." />
+        <div className="searchIcon">
+          <FiSearch />
+        </div>
       </div>
 
-      <div className="navin--links">
-        <div className="view--actions">
-          View Actions
+      <div className="view--actions">
+        <span>View Actions</span>
+      </div>
+
+      <div className="user" onClick={toggleDropdown}>
+        <div className="__info">
+          <FaRegUserCircle className="user-logo" />
+          <p style={{ paddingLeft: '.5rem' }}>Hi, Joshua</p>
+          {showDropdown ? (
+            <AiOutlineArrowUp className="menu_d_icon" style={{ paddingLeft: '.5rem' }} />
+          ) : (
+            <AiOutlineArrowDown className="menu_d_icon" style={{ paddingLeft: '.5rem' }} />
+          )}
         </div>
 
-        <div className="user--info" onClick={show}>
-          <FaRegUserCircle className="user-logo"/>
-
-          <p style={{marginLeft: ".5rem"}}> Hi, Joshua</p>
-
-          <AiOutlineDown style={{marginLeft: ".5rem"}} />
-
-          <div className={drop}>
-              <ul className="dropdown-content">
-                <li>My Account</li>
-                <li>My finance</li>
-                <li>My Update</li>
-                <button>Logout</button>
-              </ul>
-          </div>
+        <div className={`dropdown ${showDropdown ? 'show' : ''}`}>
+          <a href="" className="dropdown-link">My Account</a>
+          <a href="" className="dropdown-link">Settings</a>
+          <button>Logout</button>
         </div>
-
       </div>
     </nav>
-  )
+  );
 }
 
 export default Navin;

@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Routes, useNavigate } from 'react-router-dom';
-import Navin from '../App/Navin';
-import Dash from '../App/Dash';
+// import Navin from '../App/Navin';
+// import Dash from '../App/Dash';
 // import Jobcards from '../App/Cards/Jobcards';
 // import JobsContainer from '../Listings/JobsContainer';
 
 const Dashboard = () => {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(true);
-  const [toekn, setToken] = useState(null);
+  const [token, setToken] = useState(null);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -44,7 +44,6 @@ const Dashboard = () => {
 
   return (
     <div className="dashboardRoute">
-      {/* <JobsContainer /> */}
       {loading ? (
         <p>Loading...</p>
       ) : (

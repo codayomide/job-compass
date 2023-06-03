@@ -29,7 +29,7 @@ const Jobs = () => {
   }, []);
 
   return (
-    <section id="jobs-container__main">
+    <section id="default_jobs">
       {loading ? (
         <p>Loading...</p>
       ) : (

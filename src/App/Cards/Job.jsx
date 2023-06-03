@@ -10,7 +10,7 @@ const Job = ({ job }) => {
 
       <div className="job-card__price">
         <h3 className="price">{`₦${formatter.format(job.offer.lowest)} - ₦${formatter.format(job.offer.highest)}`}</h3>
-        <small className="section-name">Budget</small>
+        <small className="section-name">~Budget</small>
       </div>
 
       <p className="job-card__description">{job.desc}</p>

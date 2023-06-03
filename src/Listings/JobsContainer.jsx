@@ -2,9 +2,14 @@ import DefaultJobs from "./Jobs";
 
 const JobsContainer = () => {
   return ( 
-    <main id="jobs-container" className="dashboardRoute">
-      <h1 id="jobs-container__header">Recent Jobs</h1>
-      <DefaultJobs />
+    <main id="jobs_container" className="dashboardRoute">
+      <div className="default">
+        <h4 id="__header">Recent Jobs</h4>
+        <DefaultJobs />
+      </div>
+      <div className="recommended">
+
+      </div>
     </main>
   );
 }
