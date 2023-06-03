@@ -1,0 +1,71 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px; /* Set a fixed width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  background-color: $neutral;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow */
+
+
+  h2 {
+    color: $primary;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    width: 300px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      label {
+        color: $secondary;
+        margin-bottom: 5px;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid $secondary;
+        border-radius: 4px;
+
+        &:focus {
+          outline: none;
+          border-color: $primary;
+        }
+      }
+
+      .error-message {
+        color: $danger;
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    }
+
+    .error-message {
+      color: $danger;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: $primary;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+  }
+}
