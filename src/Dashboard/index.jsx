@@ -13,6 +13,7 @@ const Dashboard = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
+    localStorage.removeItem('user');
     setToken(null);
     navigate('/login', {replace: true});
   }
@@ -33,7 +34,6 @@ const Dashboard = () => {
         .then((data) => {
           setUserData(data.data);
           setLoading(false);
-          console.log(data.data.id)
         });
       } catch (err) {
         console.log(err);

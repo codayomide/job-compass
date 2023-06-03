@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 import { BsSearch } from 'react-icons/bs';
-import PrivateRoute from './PrivateRoute';
 import Dashboard from '../Dashboard';
 
 import { useState } from 'react';
